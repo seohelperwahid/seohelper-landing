@@ -1,70 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SEOHelperWahid – Local SEO Content for Small Businesses</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEOHelperWahid – Multilingual SEO Landing</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
-    header, footer { background: #007f5f; color: white; text-align: center; padding: 20px; }
-    .content { padding: 20px; max-width: 800px; margin: auto; }
-    h1, h2 { color: #007f5f; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-    th { background-color: #e0f7e9; }
-    .lang { text-align: right; margin: 10px; font-size: 14px; }
-    .lang a { margin: 0 5px; text-decoration: none; color: #007f5f; }
-    .cta { margin-top: 30px; background: #007f5f; color: white; padding: 15px; text-align: center; font-size: 18px; }
-    a.btn { display: inline-block; background: white; color: #007f5f; padding: 10px 20px; border-radius: 5px; margin-top: 10px; text-decoration: none; font-weight: bold; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      border-bottom: 1px solid #333;
+    }
+    h1, h2 {
+      color: #00ff88;
+    }
+    .lang-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #00ff88;
+      padding-bottom: 10px;
+    }
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta a {
+      color: #00ff88;
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
-
-  <div class="lang">
-    🌍 Language: 
-    <a href="#">EN</a> | 
-    <a href="fr.html">FR</a> | 
-    <a href="de.html">DE</a> | 
-    <a href="ar.html">AR</a>
-  </div>
-
-  <header>
-    <h1>SEOHelperWahid</h1>
-    <p>Local SEO Blog Content & Keyword Strategy for Small Businesses in Berlin, London, Paris, and Morocco</p>
-  </header>
-
-  <div class="content">
-    <h2>Get More Local Customers from Google</h2>
-    <p>I help local businesses like organic shops, salons, coaches, and service providers appear on Google through SEO blog content, keyword plans, and AI-powered strategies.</p>
-
-    <h2>Services & Pricing</h2>
-    <table>
-      <tr><th>Package</th><th>What's Included</th><th>Price</th></tr>
-      <tr><td>Free Audit</td><td>1 SEO blog idea + 3 keywords</td><td>€0</td></tr>
-      <tr><td>Starter Kit</td><td>2 blog posts + full keyword plan</td><td>€59</td></tr>
-      <tr><td>Monthly SEO Pack</td><td>4 blog posts/month + keyword calendar + guidance</td><td>€149</td></tr>
-    </table>
-
-    <h2>How It Works</h2>
-    <ul>
-      <li>You tell me your business name and goals</li>
-      <li>I prepare SEO keywords and blog ideas using AI</li>
-      <li>Delivery in 48 hours, ready to publish</li>
-      <li>Pay only if you’re happy with the result (PayPal supported)</li>
-    </ul>
-
-    <div class="cta">
-      Want your free SEO mini audit?<br>
-      📩 Email me: <strong>Mohawahid1997@gmail.com</strong><br>
-      📱 WhatsApp: <strong>+49 1573 5645832</strong><br>
-      💳 PayPal: <a href="https://paypal.me/SEOHelperWahid" class="btn">Pay with PayPal</a>
+  <section>
+    <h1>SEOHelperWahid – Local SEO Services</h1>
+    <p class="lang-title">English</p>
+    <p>I help businesses rank higher on Google through AI-enhanced SEO blog content and keyword strategy. Let's grow your organic reach together.</p>
+  </section>  <section>
+    <p class="lang-title">Français</p>
+    <p>J'aide les entreprises à mieux se positionner sur Google grâce à un contenu SEO et une stratégie de mots-clés pilotés par l'intelligence artificielle.</p>
+  </section>  <section>
+    <p class="lang-title">Deutsch</p>
+    <p>Ich helfe Unternehmen, durch KI-gestützte SEO-Inhalte und Keyword-Strategien bessere Google-Rankings zu erzielen.</p>
+  </section>  <section dir="rtl">
+    <p class="lang-title">العربية</p>
+    <p>أساعد الشركات على الظهور في Google عن طريق محتوى SEO وخطط كلمات مفتاحية مدعومة بالذكاء الاصطناعي.</p>
+  </section>  <section>
+    <h2>SEO Results Example (Animated)</h2>
+    <div class="chart-container">
+      <canvas id="seoChart"></canvas>
     </div>
-  </div>
-
-  <footer>
-    &copy; 2025 SEOHelperWahid – All rights reserved.
-  </footer>
-
-</body>
+  </section>  <section class="cta">
+    <p>📧 Email: Mohawahid1997@gmail.com</p>
+    <p>📱 WhatsApp: +49 1573 5645832</p>
+    <p><a href="https://paypal.me/SEOHelperWahid" target="_blank">Click here to Pay on PayPal</a></p>
+  </section>  <script>
+    const ctx = document.getElementById('seoChart').getContext('2d');
+    const seoChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Organic Traffic Growth',
+          data: [10, 25, 40, 60, 85, 120],
+          borderColor: '#00ff88',
+          backgroundColor: 'rgba(0, 255, 136, 0.1)',
+          tension: 0.4,
+          fill: true
+        }]
+      },
+      options: {
+        scales: {
+          x: { ticks: { color: '#aaa' } },
+          y: { ticks: { color: '#aaa' } }
+        },
+        plugins: {
+          legend: { labels: { color: '#fff' } }
+        }
+      }
+    });
+  </script></body>
 </html>
-
