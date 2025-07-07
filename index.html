@@ -1,10 +1,10 @@
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEOHelperWahid – Multilingual SEO Services</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
@@ -16,7 +16,7 @@
       line-height: 1.6;
     }
     nav { background: #1e1e1e; padding: 15px; text-align: center; }
-    nav a { color: #8be9fd; cursor: pointer; margin: 0 8px; font-weight: bold; text-decoration: none; }
+    nav a { color: #8be9fd; cursor: pointer; margin: 0 8px; font-weight: bold; }
     section { padding: 30px 20px; max-width: 800px; margin: auto; }
     h1, h2 { color: #50fa7b; }
     table { width: 100%; border-collapse: collapse; margin-top: 15px; }
@@ -24,175 +24,82 @@
     th { color: #ff79c6; }
     .cta { text-align: center; background: #282a36; padding: 15px; border-radius: 5px; margin-top: 20px; }
     .cta a { color: #50fa7b; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 5px; }
-    footer { background: #1e1e1e; text-align: center; padding: 10px; color: #888; margin-top: 20px; }
-    .logo-section { text-align: center; margin-top: 40px; }
-    .logo-section img { max-height: 50px; margin: 0 10px; filter: grayscale(100%) brightness(1.2); }
-    #cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #1e1e1e;
-      color: #f0f0f0;
-      padding: 10px;
+    .hero {
       text-align: center;
-      font-size: 14px;
+      padding: 60px 20px 20px;
+      background: #1a1a1a;
     }
-    #cookie-banner button {
-      margin-left: 10px;
-      background: #50fa7b;
-      border: none;
-      padding: 5px 10px;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
+    .hero h1 { font-size: 36px; color: #8be9fd; margin-bottom: 10px; }
+    .hero p { color: #ccc; font-size: 18px; }
+    .cookie-banner {
+      position: fixed; bottom: 0; width: 100%; background: #222; color: #ccc;
+      padding: 10px 20px; text-align: center; z-index: 1000;
+      animation: slideUp 1s ease forwards;
     }
+    .cookie-banner button {
+      background: #50fa7b; border: none; color: #000; padding: 5px 10px; cursor: pointer; margin-left: 15px;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .trusted-section {
+      background: #1f1f1f;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .trusted-section h2 { color: #ffb86c; }
+    .logos { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+    .logos img { height: 50px; opacity: 0.8; }
+    footer { background: #1e1e1e; text-align: center; padding: 10px; color: #888; margin-top: 20px; }
   </style>
 </head>
-<body>
-
-<nav>
+<body><nav>
   <a onclick="switchLang('en')">EN 🇬🇧</a> |
   <a onclick="switchLang('fr')">FR 🇫🇷</a> |
   <a onclick="switchLang('de')">DE 🇩🇪</a> |
-  <a onclick="switchLang('ar')">AR 🇲🇦</a> |
-  <a href="#impressum">Impressum</a> |
-  <a href="#privacy">Privacy</a>
-</nav>
-
-<section>
-  <h1 id="title">SEOHelperWahid</h1>
-  <p id="subtitle">SEO Content & Strategy for Local Businesses</p>
-  <canvas id="seoChart"></canvas>
-
+  <a onclick="switchLang('ar')">AR 🇲🇦</a>
+</nav><section class="hero">
+  <h1>SEOHelperWahid</h1>
+  <p>Boost your visibility. Multilingual SEO for local success.</p>
+</section><section>
   <h2 id="pricing">Packages & Pricing</h2>
   <table>
     <tr><th id="pack">Package</th><th id="details">Details</th><th id="price">Price</th></tr>
     <tr><td id="pack1">Free Audit</td><td id="detail1">1 blog idea + keywords</td><td>€0</td></tr>
     <tr><td id="pack2">Starter Kit</td><td id="detail2">2 blog posts + keywords</td><td>€59</td></tr>
     <tr><td id="pack3">Monthly Pack</td><td id="detail3">4 blog posts/month</td><td>€149</td></tr>
-  </table>
+  </table><canvas id="seoChart"></canvas>
 
   <div class="cta">
     <a href="https://wa.me/4915735645832" id="whatsapp">💬 WhatsApp Me Directly</a><br>
     📧 Mohawahid1997@gmail.com<br>
     💳 <a href="https://www.paypal.me/wahidmohamed24" id="paypal">Pay with PayPal</a>
   </div>
-</section>
-
-<section class="logo-section">
-  <h2 id="trusted">Trusted by Local Shops in Europe & North Africa</h2>
-</section>
-
-<section id="impressum">
-  <h2>Impressum</h2>
-  <p id="impressumText">
-    Wahid Mohamed<br>
-    SEOHelperWahid<br>
-    76829 Landau in der Pfalz, Germany<br>
-    📧 Mohawahid1997@gmail.com<br>
-    📱 +49 1573 5645832
-  </p>
-</section>
-
-<section id="privacy">
-  <h2 id="privacyTitle">Privacy Policy</h2>
-  <p id="privacyText">
-    This website does not collect personal data automatically. If you contact us via email or WhatsApp, your name, email or phone may be stored to respond. We respect your privacy in accordance with GDPR. Contact us for access or deletion.
-  </p>
-</section>
-
-<footer>&copy; 2025 SEOHelperWahid</footer>
-
-<div id="cookie-banner">
-  This website uses cookies to ensure you get the best experience. <button onclick="document.getElementById('cookie-banner').style.display='none'">Got it!</button>
-</div>
-
-<script>
-const translations = {
-  en: {
-    subtitle: "SEO Content & Strategy for Local Businesses",
-    pricing: "Packages & Pricing",
-    pack: "Package",
-    details: "Details",
-    price: "Price",
-    pack1: "Free Audit",
-    detail1: "1 blog idea + keywords",
-    pack2: "Starter Kit",
-    detail2: "2 blog posts + keywords",
-    pack3: "Monthly Pack",
-    detail3: "4 blog posts/month",
-    whatsapp: "💬 WhatsApp Me Directly",
-    paypal: "Pay with PayPal",
-    trusted: "Trusted by Local Shops in Europe & North Africa",
-    privacyTitle: "Privacy Policy",
-    privacyText: "This website does not collect personal data automatically. If you contact us via email or WhatsApp, your name, email or phone may be stored to respond. We respect your privacy in accordance with GDPR. Contact us for access or deletion.",
-    impressumText: "Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 Landau in der Pfalz, Germany<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832"
-  },
-  fr: {
-    subtitle: "Contenu SEO & Stratégie pour Entreprises Locales",
-    pricing: "Services & Tarifs",
-    pack: "Pack",
-    details: "Détails",
-    price: "Prix",
-    pack1: "Audit Gratuit",
-    detail1: "1 idée + mots-clés",
-    pack2: "Kit Débutant",
-    detail2: "2 articles SEO + mots-clés",
-    pack3: "Pack Mensuel",
-    detail3: "4 articles/mois",
-    whatsapp: "💬 WhatsApp Direct",
-    paypal: "Payer via PayPal",
-    trusted: "De nombreuses boutiques nous font confiance",
-    privacyTitle: "Politique de confidentialité",
-    privacyText: "Ce site ne collecte pas automatiquement de données personnelles. Si vous nous contactez, nous pouvons stocker votre nom/email pour répondre. Nous respectons le RGPD.",
-    impressumText: "Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 Landau in der Pfalz, Allemagne<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832"
-  },
-  de: {
-    subtitle: "SEO Inhalte & Strategie für lokale Unternehmen",
-    pricing: "Angebote & Preise",
-    pack: "Paket",
-    details: "Details",
-    price: "Preis",
-    pack1: "Gratis Audit",
-    detail1: "1 Blogidee + Keywords",
-    pack2: "Starter Kit",
-    detail2: "2 Blogartikel + Keywords",
-    pack3: "Monatspaket",
-    detail3: "4 Artikel/Monat",
-    whatsapp: "💬 WhatsApp Direkt",
-    paypal: "PayPal Zahlung",
-    trusted: "Vertrauenswürdige Kunden in Europa & Nordafrika",
-    privacyTitle: "Datenschutzerklärung",
-    privacyText: "Diese Website sammelt keine personenbezogenen Daten automatisch. Wenn Sie uns kontaktieren, speichern wir ggf. Ihre Daten zur Antwort. DSGVO-konform.",
-    impressumText: "Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 Landau in der Pfalz, Deutschland<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832"
-  },
-  ar: {
-    subtitle: "محتوى SEO واستراتيجيات للشركات المحلية",
-    pricing: "الخدمات والأسعار",
-    pack: "الباقة",
-    details: "تفاصيل",
-    price: "السعر",
-    pack1: "تدقيق مجاني",
-    detail1: "فكرة + كلمات مفتاحية",
-    pack2: "باقة المبتدئين",
-    detail2: "مقالان SEO + كلمات مفتاحية",
-    pack3: "باقة شهرية",
-    detail3: "4 مقالات شهريًا",
-    whatsapp: "💬 واتساب مباشرة",
-    paypal: "الدفع عبر PayPal",
-    trusted: "موثوق من متاجر محلية بأوروبا وشمال أفريقيا",
-    privacyTitle: "سياسة الخصوصية",
-    privacyText: "لا يتم جمع بيانات شخصية تلقائيًا. عند تواصلك معنا، قد نخزن اسمك/بريدك للرد. نحترم خصوصيتك وفقًا للائحة GDPR.",
-    impressumText: "Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 لاندوا، ألمانيا<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832"
-  }
-};
-
+</section><section class="trusted-section">
+  <h2>Trusted by Clients</h2>
+  <div class="logos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Organic_Store_logo.png" alt="Organic Store" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Coffee_icon.png" alt="Café" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Hammam_icon.png" alt="Hammam" />
+  </div>
+  <p>“Great service! Helped my shop appear on Google.” – A client from Berlin</p>
+</section><div class="cookie-banner" id="cookieBanner">
+  We use cookies to improve your experience. <button onclick="document.getElementById('cookieBanner').style.display='none'">Accept</button>
+</div><footer>
+  &copy; 2025 SEOHelperWahid – Built for local business success.
+</footer><script>
 function switchLang(lang) {
-  for (const key in translations[lang]) {
-    if (document.getElementById(key)) {
-      document.getElementById(key).innerHTML = translations[lang][key];
-    }
+  const translations = {
+    en: { pricing: "Packages & Pricing", pack: "Package", details: "Details", price: "Price", pack1: "Free Audit", detail1: "1 blog idea + keywords", pack2: "Starter Kit", detail2: "2 blog posts + keywords", pack3: "Monthly Pack", detail3: "4 blog posts/month", whatsapp: "💬 WhatsApp Me Directly", paypal: "Pay with PayPal" },
+    fr: { pricing: "Services & Tarifs", pack: "Pack", details: "Détails", price: "Prix", pack1: "Audit Gratuit", detail1: "1 idée + mots-clés", pack2: "Kit Débutant", detail2: "2 articles SEO + mots-clés", pack3: "Pack Mensuel", detail3: "4 articles/mois", whatsapp: "💬 WhatsApp Direct", paypal: "Payer via PayPal" },
+    de: { pricing: "Angebote & Preise", pack: "Paket", details: "Details", price: "Preis", pack1: "Gratis Audit", detail1: "1 Blogidee + Keywords", pack2: "Starter Kit", detail2: "2 Blogartikel + Keywords", pack3: "Monatspaket", detail3: "4 Artikel/Monat", whatsapp: "💬 WhatsApp Direkt", paypal: "PayPal Zahlung" },
+    ar: { pricing: "الخدمات والأسعار", pack: "الباقة", details: "تفاصيل", price: "السعر", pack1: "تدقيق مجاني", detail1: "فكرة + كلمات مفتاحية", pack2: "باقة المبتدئين", detail2: "2 مقال SEO", pack3: "باقة شهرية", detail3: "4 مقالات شهريًا", whatsapp: "💬 واتساب مباشرة", paypal: "الدفع PayPal" }
+  };
+  const t = translations[lang];
+  for (const key in t) {
+    const el = document.getElementById(key);
+    if (el) el.innerHTML = t[key];
   }
 }
 
@@ -200,24 +107,9 @@ new Chart(document.getElementById('seoChart'), {
   type: 'line',
   data: {
     labels: ['1','2','3','4','5','6'],
-    datasets: [{
-      label: 'Visitors',
-      data: [120,250,450,650,900,1200],
-      borderColor:'#50fa7b',
-      backgroundColor:'rgba(80,250,123,0.2)'
-    }]
+    datasets: [{ label: 'Visitors', data: [120,250,450,650,900,1200], borderColor:'#50fa7b', backgroundColor:'rgba(80,250,123,0.2)' }]
   },
-  options: {
-    responsive:true,
-    scales:{
-      y:{ticks:{color:'#fff'}},
-      x:{ticks:{color:'#fff'}}
-    }
-  }
+  options: { responsive:true, scales:{ y:{ticks:{color:'#fff'}}, x:{ticks:{color:'#fff'}} } }
 });
-</script>
-
-</body>
+</script></body>
 </html>
-
-
