@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang=\"en\">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset=\"UTF-8\"/>
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
   <title>SEOHelperWahid – Trusted Multilingual SEO Services</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>
   <style>
     body { font-family: Arial, sans-serif; background: #121212; color: #f0f4f8; margin: 0; padding: 0; line-height: 1.6; }
     nav { background: #1e1e1e; padding: 15px; text-align: center; }
@@ -24,40 +23,40 @@
 <body>
 
 <nav>
-  <a onclick="switchLang('en')">EN 🇬🇧</a> | 
-  <a onclick="switchLang('fr')">FR 🇫🇷</a> | 
-  <a onclick="switchLang('de')">DE 🇩🇪</a> | 
-  <a onclick="switchLang('ar')">AR 🇲🇦</a>
+  <a onclick=\"switchLang('en')\">EN 🇬🇧</a> | 
+  <a onclick=\"switchLang('fr')\">FR 🇫🇷</a> | 
+  <a onclick=\"switchLang('de')\">DE 🇩🇪</a> | 
+  <a onclick=\"switchLang('ar')\">AR 🇲🇦</a>
 </nav>
 
 <section>
-  <h1 id="title">SEOHelperWahid</h1>
-  <p id="subtitle">Leading SEO Services Trusted by Hundreds of Businesses Worldwide</p>
-  <canvas id="seoChart"></canvas>
+  <h1 id=\"title\">SEOHelperWahid</h1>
+  <p id=\"subtitle\">Leading SEO Services Trusted by Hundreds of Businesses Worldwide</p>
+  <canvas id=\"seoChart\"></canvas>
 
-  <h2 id="pricing">Packages & Pricing</h2>
+  <h2 id=\"pricing\">Packages & Pricing</h2>
   <table>
-    <tr><th id="pack">Package</th><th id="details">Details</th><th id="price">Price</th></tr>
-    <tr><td id="pack1">Free Audit</td><td id="detail1">1 blog idea + keywords</td><td>€0</td></tr>
-    <tr><td id="pack2">Starter Kit</td><td id="detail2">2 blog posts + keywords</td><td>€59</td></tr>
-    <tr><td id="pack3">Monthly Pack</td><td id="detail3">4 blog posts/month</td><td>€149</td></tr>
+    <tr><th id=\"pack\">Package</th><th id=\"details\">Details</th><th id=\"price\">Price</th></tr>
+    <tr><td id=\"pack1\">Free Audit</td><td id=\"detail1\">1 blog idea + keywords</td><td>€0</td></tr>
+    <tr><td id=\"pack2\">Starter Kit</td><td id=\"detail2\">2 blog posts + keywords</td><td>€59</td></tr>
+    <tr><td id=\"pack3\">Monthly Pack</td><td id=\"detail3\">4 blog posts/month</td><td>€149</td></tr>
   </table>
 
-  <h2>Why Businesses Trust Us</h2>
-  <p>We've successfully helped over 300 local businesses across Berlin, London, Paris, and Morocco significantly increase their website traffic and sales through targeted SEO strategies.</p>
+  <h2 id=\"trust\">Why Businesses Trust Us</h2>
+  <p id=\"trust_text\">We've successfully helped over 300 local businesses across Berlin, London, Paris, and Morocco significantly increase their website traffic and sales through targeted SEO strategies.</p>
 
-  <div class="testimonial">
-    <strong>“Since working with SEOHelperWahid, our organic traffic increased by 250% within 4 months. Highly recommended!”</strong><br>– Emma L., Organic Shop Owner, London
+  <div class=\"testimonial\">
+    <strong id=\"test1\">“Since working with SEOHelperWahid, our organic traffic increased by 250% within 4 months. Highly recommended!”</strong><br><span id=\"test1_author\">– Emma L., Organic Shop Owner, London</span>
   </div>
 
-  <div class="testimonial">
-    <strong>“A reliable SEO partner who understands our needs and delivers consistent results month after month.”</strong><br>– Youssef A., Vegan Restaurant, Paris
+  <div class=\"testimonial\">
+    <strong id=\"test2\">“A reliable SEO partner who understands our needs and delivers consistent results month after month.”</strong><br><span id=\"test2_author\">– Youssef A., Vegan Restaurant, Paris</span>
   </div>
 
-  <div class="cta">
-    <a href="https://wa.me/4915735645832" id="whatsapp">💬 WhatsApp Me Directly</a><br>
+  <div class=\"cta\">
+    <a href=\"https://wa.me/4915735645832\" id=\"whatsapp\">💬 WhatsApp Me Directly</a><br>
     📧 Mohawahid1997@gmail.com<br>
-    💳 <a href="https://www.paypal.me/wahidmohamed24" id="paypal">Pay with PayPal</a>
+    💳 <a href=\"https://www.paypal.me/wahidmohamed24\" id=\"paypal\">Pay with PayPal</a>
   </div>
 </section>
 
@@ -66,13 +65,30 @@
 <script>
 function switchLang(lang) {
   const translations = {
-    en: { subtitle: "Leading SEO Services Trusted by Hundreds of Businesses Worldwide", pricing: "Packages & Pricing" },
-    fr: { subtitle: "Services SEO de confiance pour des centaines d'entreprises à l’international", pricing: "Services & Tarifs" },
-    de: { subtitle: "Führende SEO-Services, denen Hunderte Unternehmen weltweit vertrauen", pricing: "Angebote & Preise" },
-    ar: { subtitle: "خدمات SEO موثوقة تعتمدها مئات الشركات حول العالم", pricing: "الخدمات والأسعار" }
+    en: {
+      subtitle: \"Leading SEO Services Trusted by Hundreds of Businesses Worldwide\",
+      pricing: \"Packages & Pricing\",
+      trust: \"Why Businesses Trust Us\",
+      trust_text: \"We've successfully helped over 300 local businesses across Berlin, London, Paris, and Morocco significantly increase their website traffic and sales through targeted SEO strategies.\",
+      test1: \"“Since working with SEOHelperWahid, our organic traffic increased by 250% within 4 months. Highly recommended!”\",
+      test1_author: \"– Emma L., Organic Shop Owner, London\",
+      test2: \"“A reliable SEO partner who understands our needs and delivers consistent results month after month.”\",
+      test2_author: \"– Youssef A., Vegan Restaurant, Paris\"
+    },
+    fr: {
+      subtitle: \"Services SEO de confiance pour des centaines d'entreprises à l’international\",
+      pricing: \"Services & Tarifs\",
+      trust: \"Pourquoi les entreprises nous font confiance\",
+      trust_text: \"Nous avons aidé plus de 300 entreprises locales à Berlin, Londres, Paris et au Maroc à augmenter significativement leur trafic web grâce à nos stratégies SEO ciblées.\",
+      test1: \"“Depuis notre collaboration avec SEOHelperWahid, notre trafic organique a augmenté de 250 % en 4 mois seulement !”\",
+      test1_author: \"– Emma L., Propriétaire magasin bio, Londres\",
+      test2: \"“Un partenaire SEO fiable qui comprend nos besoins et apporte des résultats constants chaque mois.”\",
+      test2_author: \"– Youssef A., Restaurant vegan, Paris\"
+    }
   };
-  document.getElementById('subtitle').innerHTML = translations[lang].subtitle;
-  document.getElementById('pricing').innerHTML = translations[lang].pricing;
+  for (let key in translations[lang]) {
+    document.getElementById(key).innerHTML = translations[lang][key];
+  }
 }
 
 new Chart(document.getElementById('seoChart'), {
