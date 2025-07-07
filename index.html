@@ -4,6 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SEOHelperWahid – Multilingual SEO Services</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,58 +14,23 @@
       padding: 0;
       line-height: 1.6;
     }
-    nav {
-      background: #1e1e1e;
-      padding: 15px;
-      text-align: center;
-    }
-    nav a {
-      color: #8be9fd;
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: bold;
-    }
-    section {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1, h2 {
-      color: #50fa7b;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-    th, td {
-      border-bottom: 1px solid #333;
-      padding: 10px;
-    }
-    th {
-      color: #ff79c6;
-    }
+    nav { background: #1e1e1e; padding: 15px; text-align: center; }
+    nav a { color: #8be9fd; text-decoration: none; margin: 0 8px; font-weight: bold; }
+    section { padding: 30px 20px; max-width: 800px; margin: auto; }
+    h1, h2 { color: #50fa7b; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border-bottom: 1px solid #333; padding: 10px; }
+    th { color: #ff79c6; }
     .cta {
-      text-align: center;
-      background: #282a36;
-      padding: 15px;
-      border-radius: 5px;
-      margin-top: 20px;
+      text-align: center; background: #282a36; padding: 15px;
+      border-radius: 5px; margin-top: 20px;
     }
     .cta a {
-      color: #50fa7b;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 5px;
+      color: #50fa7b; text-decoration: none; font-weight: bold;
+      display: inline-block; margin-top: 5px;
     }
-    footer {
-      background: #1e1e1e;
-      text-align: center;
-      padding: 10px;
-      color: #888;
-      margin-top: 20px;
-    }
+    footer { background: #1e1e1e; text-align: center; padding: 10px; color: #888; margin-top: 20px; }
+    canvas { margin-top: 25px; background: #1e1e1e; border-radius: 8px; padding: 10px; }
   </style>
 </head>
 <body>
@@ -76,10 +42,10 @@
   <a href="#ar">AR 🇲🇦</a>
 </nav>
 
-<!-- English -->
 <section id="en">
   <h1>SEOHelperWahid</h1>
   <p>SEO Content & Strategy for Local Businesses</p>
+  <canvas id="seoChart"></canvas>
   <h2>Packages & Pricing</h2>
   <table>
     <tr><th>Package</th><th>Details</th><th>Price</th></tr>
@@ -94,61 +60,36 @@
   </div>
 </section>
 
-<!-- French -->
-<section id="fr">
-  <h1>SEOHelperWahid</h1>
-  <p>Contenu SEO & Stratégie pour Entreprises Locales</p>
-  <h2>Services & Tarifs</h2>
-  <table>
-    <tr><th>Pack</th><th>Détails</th><th>Prix</th></tr>
-    <tr><td>Audit Gratuit</td><td>1 idée + mots-clés</td><td>0€</td></tr>
-    <tr><td>Kit Débutant</td><td>2 articles SEO + mots-clés</td><td>59€</td></tr>
-    <tr><td>Pack Mensuel</td><td>4 articles/mois</td><td>149€</td></tr>
-  </table>
-  <div class="cta">
-    <a href="https://wa.me/4915735645832">💬 WhatsApp Direct</a><br>
-    📧 Mohawahid1997@gmail.com<br>
-    💳 <a href="https://www.paypal.me/wahidmohamed24">Payer via PayPal</a>
-  </div>
-</section>
-
-<!-- German -->
-<section id="de">
-  <h1>SEOHelperWahid</h1>
-  <p>SEO Inhalte & Strategie für lokale Unternehmen</p>
-  <h2>Angebote & Preise</h2>
-  <table>
-    <tr><th>Paket</th><th>Details</th><th>Preis</th></tr>
-    <tr><td>Gratis Audit</td><td>1 Blogidee + Keywords</td><td>0€</td></tr>
-    <tr><td>Starter Kit</td><td>2 Blogartikel + Keywords</td><td>59€</td></tr>
-    <tr><td>Monatspaket</td><td>4 Artikel/Monat</td><td>149€</td></tr>
-  </table>
-  <div class="cta">
-    <a href="https://wa.me/4915735645832">💬 WhatsApp Direkt</a><br>
-    📧 Mohawahid1997@gmail.com<br>
-    💳 <a href="https://www.paypal.me/wahidmohamed24">PayPal Zahlung</a>
-  </div>
-</section>
-
-<!-- Arabic -->
-<section id="ar" dir="rtl" style="text-align:right;">
-  <h1>SEOHelperWahid</h1>
-  <p>محتوى SEO واستراتيجيات للشركات المحلية</p>
-  <h2>الخدمات والأسعار</h2>
-  <table>
-    <tr><th>الباقة</th><th>تفاصيل</th><th>السعر</th></tr>
-    <tr><td>تدقيق مجاني</td><td>فكرة + كلمات مفتاحية</td><td>0€</td></tr>
-    <tr><td>باقة المبتدئين</td><td>2 مقال SEO</td><td>59€</td></tr>
-    <tr><td>باقة شهرية</td><td>4 مقالات شهريًا</td><td>149€</td></tr>
-  </table>
-  <div class="cta">
-    <a href="https://wa.me/4915735645832">💬 واتساب مباشرة</a><br>
-    📧 Mohawahid1997@gmail.com<br>
-    💳 <a href="https://www.paypal.me/wahidmohamed24">الدفع PayPal</a>
-  </div>
-</section>
-
 <footer>&copy; 2025 SEOHelperWahid</footer>
+
+<script>
+  const ctx = document.getElementById('seoChart').getContext('2d');
+  const seoChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6'],
+      datasets: [{
+        label: 'Website Visitors After SEO',
+        data: [120, 200, 340, 500, 750, 1000],
+        borderColor: '#50fa7b',
+        backgroundColor: 'rgba(80,250,123,0.2)',
+        borderWidth: 3,
+        tension: 0.4,
+        pointBackgroundColor: '#ff79c6'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { labels: { color: '#fff' } }
+      },
+      scales: {
+        y: { ticks: { color: '#fff' }, grid: { color: '#333' } },
+        x: { ticks: { color: '#fff' }, grid: { color: '#333' } }
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
