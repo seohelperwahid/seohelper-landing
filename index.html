@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-  <meta charset=\"UTF-8\"/>
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-  <title>SEOHelperWahid – Trusted Multilingual SEO Services</title>
-  <script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEOHelperWahid – Multilingual SEO Services</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; background: #121212; color: #f0f4f8; margin: 0; padding: 0; line-height: 1.6; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
     nav { background: #1e1e1e; padding: 15px; text-align: center; }
     nav a { color: #8be9fd; cursor: pointer; margin: 0 8px; font-weight: bold; }
     section { padding: 30px 20px; max-width: 800px; margin: auto; }
@@ -17,87 +24,117 @@
     .cta { text-align: center; background: #282a36; padding: 15px; border-radius: 5px; margin-top: 20px; }
     .cta a { color: #50fa7b; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 5px; }
     footer { background: #1e1e1e; text-align: center; padding: 10px; color: #888; margin-top: 20px; }
-    .testimonial { background: #1e1e1e; padding: 15px; border-radius: 5px; margin-top: 15px; }
   </style>
 </head>
 <body>
 
 <nav>
-  <a onclick=\"switchLang('en')\">EN 🇬🇧</a> | 
-  <a onclick=\"switchLang('fr')\">FR 🇫🇷</a> | 
-  <a onclick=\"switchLang('de')\">DE 🇩🇪</a> | 
-  <a onclick=\"switchLang('ar')\">AR 🇲🇦</a>
+  <a onclick="switchLang('en')">EN 🇬🇧</a> | 
+  <a onclick="switchLang('fr')">FR 🇫🇷</a> | 
+  <a onclick="switchLang('de')">DE 🇩🇪</a> | 
+  <a onclick="switchLang('ar')">AR 🇲🇦</a>
 </nav>
 
 <section>
-  <h1 id=\"title\">SEOHelperWahid</h1>
-  <p id=\"subtitle\">Leading SEO Services Trusted by Hundreds of Businesses Worldwide</p>
-  <canvas id=\"seoChart\"></canvas>
+  <h1 id="title">SEOHelperWahid</h1>
+  <p id="subtitle">SEO Content & Strategy for Local Businesses</p>
+  <canvas id="seoChart"></canvas>
 
-  <h2 id=\"pricing\">Packages & Pricing</h2>
+  <h2 id="pricing">Packages & Pricing</h2>
   <table>
-    <tr><th id=\"pack\">Package</th><th id=\"details\">Details</th><th id=\"price\">Price</th></tr>
-    <tr><td id=\"pack1\">Free Audit</td><td id=\"detail1\">1 blog idea + keywords</td><td>€0</td></tr>
-    <tr><td id=\"pack2\">Starter Kit</td><td id=\"detail2\">2 blog posts + keywords</td><td>€59</td></tr>
-    <tr><td id=\"pack3\">Monthly Pack</td><td id=\"detail3\">4 blog posts/month</td><td>€149</td></tr>
+    <tr><th id="pack">Package</th><th id="details">Details</th><th id="price">Price</th></tr>
+    <tr><td id="pack1">Free Audit</td><td id="detail1">1 blog idea + keywords</td><td>€0</td></tr>
+    <tr><td id="pack2">Starter Kit</td><td id="detail2">2 blog posts + keywords</td><td>€59</td></tr>
+    <tr><td id="pack3">Monthly Pack</td><td id="detail3">4 blog posts/month</td><td>€149</td></tr>
   </table>
 
-  <h2 id=\"trust\">Why Businesses Trust Us</h2>
-  <p id=\"trust_text\">We've successfully helped over 300 local businesses across Berlin, London, Paris, and Morocco significantly increase their website traffic and sales through targeted SEO strategies.</p>
-
-  <div class=\"testimonial\">
-    <strong id=\"test1\">“Since working with SEOHelperWahid, our organic traffic increased by 250% within 4 months. Highly recommended!”</strong><br><span id=\"test1_author\">– Emma L., Organic Shop Owner, London</span>
-  </div>
-
-  <div class=\"testimonial\">
-    <strong id=\"test2\">“A reliable SEO partner who understands our needs and delivers consistent results month after month.”</strong><br><span id=\"test2_author\">– Youssef A., Vegan Restaurant, Paris</span>
-  </div>
-
-  <div class=\"cta\">
-    <a href=\"https://wa.me/4915735645832\" id=\"whatsapp\">💬 WhatsApp Me Directly</a><br>
+  <div class="cta">
+    <a href="https://wa.me/4915735645832" id="whatsapp">💬 WhatsApp Me Directly</a><br>
     📧 Mohawahid1997@gmail.com<br>
-    💳 <a href=\"https://www.paypal.me/wahidmohamed24\" id=\"paypal\">Pay with PayPal</a>
+    💳 <a href="https://www.paypal.me/wahidmohamed24" id="paypal">Pay with PayPal</a>
   </div>
 </section>
 
-<footer>&copy; 2025 SEOHelperWahid – Trusted by 300+ Businesses</footer>
+<footer>&copy; 2025 SEOHelperWahid</footer>
 
 <script>
+const translations = {
+  en: {
+    subtitle: "SEO Content & Strategy for Local Businesses",
+    pricing: "Packages & Pricing",
+    pack: "Package",
+    details: "Details",
+    price: "Price",
+    pack1: "Free Audit",
+    detail1: "1 blog idea + keywords",
+    pack2: "Starter Kit",
+    detail2: "2 blog posts + keywords",
+    pack3: "Monthly Pack",
+    detail3: "4 blog posts/month",
+    whatsapp: "💬 WhatsApp Me Directly",
+    paypal: "Pay with PayPal"
+  },
+  fr: {
+    subtitle: "Contenu SEO & Stratégie pour Entreprises Locales",
+    pricing: "Services & Tarifs",
+    pack: "Pack",
+    details: "Détails",
+    price: "Prix",
+    pack1: "Audit Gratuit",
+    detail1: "1 idée + mots-clés",
+    pack2: "Kit Débutant",
+    detail2: "2 articles SEO + mots-clés",
+    pack3: "Pack Mensuel",
+    detail3: "4 articles/mois",
+    whatsapp: "💬 WhatsApp Direct",
+    paypal: "Payer via PayPal"
+  },
+  de: {
+    subtitle: "SEO Inhalte & Strategie für lokale Unternehmen",
+    pricing: "Angebote & Preise",
+    pack: "Paket",
+    details: "Details",
+    price: "Preis",
+    pack1: "Gratis Audit",
+    detail1: "1 Blogidee + Keywords",
+    pack2: "Starter Kit",
+    detail2: "2 Blogartikel + Keywords",
+    pack3: "Monatspaket",
+    detail3: "4 Artikel/Monat",
+    whatsapp: "💬 WhatsApp Direkt",
+    paypal: "PayPal Zahlung"
+  },
+  ar: {
+    subtitle: "محتوى SEO واستراتيجيات للشركات المحلية",
+    pricing: "الخدمات والأسعار",
+    pack: "الباقة",
+    details: "تفاصيل",
+    price: "السعر",
+    pack1: "تدقيق مجاني",
+    detail1: "فكرة + كلمات مفتاحية",
+    pack2: "باقة المبتدئين",
+    detail2: "2 مقال SEO",
+    pack3: "باقة شهرية",
+    detail3: "4 مقالات شهريًا",
+    whatsapp: "💬 واتساب مباشرة",
+    paypal: "الدفع PayPal"
+  }
+};
+
 function switchLang(lang) {
-  const translations = {
-    en: {
-      subtitle: \"Leading SEO Services Trusted by Hundreds of Businesses Worldwide\",
-      pricing: \"Packages & Pricing\",
-      trust: \"Why Businesses Trust Us\",
-      trust_text: \"We've successfully helped over 300 local businesses across Berlin, London, Paris, and Morocco significantly increase their website traffic and sales through targeted SEO strategies.\",
-      test1: \"“Since working with SEOHelperWahid, our organic traffic increased by 250% within 4 months. Highly recommended!”\",
-      test1_author: \"– Emma L., Organic Shop Owner, London\",
-      test2: \"“A reliable SEO partner who understands our needs and delivers consistent results month after month.”\",
-      test2_author: \"– Youssef A., Vegan Restaurant, Paris\"
-    },
-    fr: {
-      subtitle: \"Services SEO de confiance pour des centaines d'entreprises à l’international\",
-      pricing: \"Services & Tarifs\",
-      trust: \"Pourquoi les entreprises nous font confiance\",
-      trust_text: \"Nous avons aidé plus de 300 entreprises locales à Berlin, Londres, Paris et au Maroc à augmenter significativement leur trafic web grâce à nos stratégies SEO ciblées.\",
-      test1: \"“Depuis notre collaboration avec SEOHelperWahid, notre trafic organique a augmenté de 250 % en 4 mois seulement !”\",
-      test1_author: \"– Emma L., Propriétaire magasin bio, Londres\",
-      test2: \"“Un partenaire SEO fiable qui comprend nos besoins et apporte des résultats constants chaque mois.”\",
-      test2_author: \"– Youssef A., Restaurant vegan, Paris\"
-    }
-  };
-  for (let key in translations[lang]) {
+  for (const key in translations[lang]) {
     document.getElementById(key).innerHTML = translations[lang][key];
   }
 }
 
 new Chart(document.getElementById('seoChart'), {
   type: 'line',
-  data: { labels: ['1','2','3','4','5','6'], datasets: [{ label: 'Visitors', data: [150,300,500,750,1100,1500], borderColor:'#50fa7b', backgroundColor:'rgba(80,250,123,0.2)' }]},
+  data: { labels: ['1','2','3','4','5','6'], datasets: [{ label: 'Visitors', data: [120,250,450,650,900,1200], borderColor:'#50fa7b', backgroundColor:'rgba(80,250,123,0.2)' }]},
   options: {responsive:true, scales:{y:{ticks:{color:'#fff'}},x:{ticks:{color:'#fff'}}}}
 });
 </script>
 
 </body>
 </html>
+
 
