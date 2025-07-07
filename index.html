@@ -1,5 +1,5 @@
-
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,29 +54,39 @@
     footer { background: #1e1e1e; text-align: center; padding: 10px; color: #888; margin-top: 20px; }
   </style>
 </head>
-<body><nav>
+<body>
+
+<nav>
   <a onclick="switchLang('en')">EN 🇬🇧</a> |
   <a onclick="switchLang('fr')">FR 🇫🇷</a> |
   <a onclick="switchLang('de')">DE 🇩🇪</a> |
   <a onclick="switchLang('ar')">AR 🇲🇦</a>
-</nav><section class="hero">
+</nav>
+
+<section class="hero">
   <h1>SEOHelperWahid</h1>
   <p>Boost your visibility. Multilingual SEO for local success.</p>
-</section><section>
+</section>
+
+<section>
   <h2 id="pricing">Packages & Pricing</h2>
   <table>
     <tr><th id="pack">Package</th><th id="details">Details</th><th id="price">Price</th></tr>
     <tr><td id="pack1">Free Audit</td><td id="detail1">1 blog idea + keywords</td><td>€0</td></tr>
     <tr><td id="pack2">Starter Kit</td><td id="detail2">2 blog posts + keywords</td><td>€59</td></tr>
     <tr><td id="pack3">Monthly Pack</td><td id="detail3">4 blog posts/month</td><td>€149</td></tr>
-  </table><canvas id="seoChart"></canvas>
+  </table>
+
+  <canvas id="seoChart"></canvas>
 
   <div class="cta">
     <a href="https://wa.me/4915735645832" id="whatsapp">💬 WhatsApp Me Directly</a><br>
     📧 Mohawahid1997@gmail.com<br>
     💳 <a href="https://www.paypal.me/wahidmohamed24" id="paypal">Pay with PayPal</a>
   </div>
-</section><section class="trusted-section">
+</section>
+
+<section class="trusted-section">
   <h2>Trusted by Clients</h2>
   <div class="logos">
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Organic_Store_logo.png" alt="Organic Store" />
@@ -84,11 +94,17 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Hammam_icon.png" alt="Hammam" />
   </div>
   <p>“Great service! Helped my shop appear on Google.” – A client from Berlin</p>
-</section><div class="cookie-banner" id="cookieBanner">
+</section>
+
+<div class="cookie-banner" id="cookieBanner">
   We use cookies to improve your experience. <button onclick="document.getElementById('cookieBanner').style.display='none'">Accept</button>
-</div><footer>
+</div>
+
+<footer>
   &copy; 2025 SEOHelperWahid – Built for local business success.
-</footer><script>
+</footer>
+
+<script>
 function switchLang(lang) {
   const translations = {
     en: { pricing: "Packages & Pricing", pack: "Package", details: "Details", price: "Price", pack1: "Free Audit", detail1: "1 blog idea + keywords", pack2: "Starter Kit", detail2: "2 blog posts + keywords", pack3: "Monthly Pack", detail3: "4 blog posts/month", whatsapp: "💬 WhatsApp Me Directly", paypal: "Pay with PayPal" },
@@ -111,5 +127,6 @@ new Chart(document.getElementById('seoChart'), {
   },
   options: { responsive:true, scales:{ y:{ticks:{color:'#fff'}}, x:{ticks:{color:'#fff'}} } }
 });
-</script></body>
+</script>
+</body>
 </html>
