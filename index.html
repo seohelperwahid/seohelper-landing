@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+    
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,7 +15,7 @@
       line-height: 1.6;
     }
     nav { background: #1e1e1e; padding: 15px; text-align: center; }
-    nav a { color: #8be9fd; cursor: pointer; margin: 0 8px; font-weight: bold; }
+    nav a { color: #8be9fd; cursor: pointer; margin: 0 8px; font-weight: bold; text-decoration: none; }
     section { padding: 30px 20px; max-width: 800px; margin: auto; }
     h1, h2 { color: #50fa7b; }
     table { width: 100%; border-collapse: collapse; margin-top: 15px; }
@@ -24,40 +24,74 @@
     .cta { text-align: center; background: #282a36; padding: 15px; border-radius: 5px; margin-top: 20px; }
     .cta a { color: #50fa7b; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 5px; }
     footer { background: #1e1e1e; text-align: center; padding: 10px; color: #888; margin-top: 20px; }
+    .logo-section { text-align: center; margin-top: 40px; }
+    .logo-section img { max-height: 50px; margin: 0 10px; filter: grayscale(100%) brightness(1.2); }
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1e1e1e;
+      color: #f0f0f0;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    #cookie-banner button {
+      margin-left: 10px;
+      background: #50fa7b;
+      border: none;
+      padding: 5px 10px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
-<body>
-
-<nav>
-  <a onclick="switchLang('en')">EN 🇬🇧</a> | 
-  <a onclick="switchLang('fr')">FR 🇫🇷</a> | 
-  <a onclick="switchLang('de')">DE 🇩🇪</a> | 
-  <a onclick="switchLang('ar')">AR 🇲🇦</a>
-</nav>
-
-<section>
+<body><nav>
+  <a onclick="switchLang('en')">EN 🇬🇧</a> |
+  <a onclick="switchLang('fr')">FR 🇫🇷</a> |
+  <a onclick="switchLang('de')">DE 🇩🇪</a> |
+  <a onclick="switchLang('ar')">AR 🇲🇦</a> |
+  <a href="#impressum">Impressum</a> |
+  <a href="#privacy">Privacy</a>
+</nav><section>
   <h1 id="title">SEOHelperWahid</h1>
   <p id="subtitle">SEO Content & Strategy for Local Businesses</p>
-  <canvas id="seoChart"></canvas>
-
-  <h2 id="pricing">Packages & Pricing</h2>
+  <canvas id="seoChart"></canvas>  <h2 id="pricing">Packages & Pricing</h2>
   <table>
     <tr><th id="pack">Package</th><th id="details">Details</th><th id="price">Price</th></tr>
     <tr><td id="pack1">Free Audit</td><td id="detail1">1 blog idea + keywords</td><td>€0</td></tr>
     <tr><td id="pack2">Starter Kit</td><td id="detail2">2 blog posts + keywords</td><td>€59</td></tr>
     <tr><td id="pack3">Monthly Pack</td><td id="detail3">4 blog posts/month</td><td>€149</td></tr>
-  </table>
-
-  <div class="cta">
+  </table>  <div class="cta">
     <a href="https://wa.me/4915735645832" id="whatsapp">💬 WhatsApp Me Directly</a><br>
     📧 Mohawahid1997@gmail.com<br>
     💳 <a href="https://www.paypal.me/wahidmohamed24" id="paypal">Pay with PayPal</a>
   </div>
-</section>
-
-<footer>&copy; 2025 SEOHelperWahid</footer>
-
-<script>
+</section><section class="logo-section">
+  <h2 id="trusted">Trusted by Local Shops in Europe & North Africa</h2>
+  <img src="https://via.placeholder.com/100x50?text=Client+1" alt="Client 1"/>
+  <img src="https://via.placeholder.com/100x50?text=Client+2" alt="Client 2"/>
+  <img src="https://via.placeholder.com/100x50?text=Client+3" alt="Client 3"/>
+</section><section id="impressum">
+  <h2>Impressum</h2>
+  <p id="impressumText">
+    Wahid Mohamed<br>
+    SEOHelperWahid<br>
+    Ostring Center 17–19<br>
+    76829 Landau in der Pfalz, Germany<br>
+    📧 Mohawahid1997@gmail.com<br>
+    📱 +49 1573 5645832
+  </p>
+</section><section id="privacy">
+  <h2 id="privacyTitle">Privacy Policy</h2>
+  <p id="privacyText">
+    This website does not collect personal data automatically. If you contact us via email or WhatsApp, your name, email or phone may be stored to respond. We respect your privacy in accordance with GDPR. Contact us for access or deletion.
+  </p>
+</section><footer>&copy; 2025 SEOHelperWahid</footer><div id="cookie-banner">
+  This website uses cookies to ensure you get the best experience. <button onclick="document.getElementById('cookie-banner').style.display='none'">Got it!</button>
+</div><script>
 const translations = {
   en: {
     subtitle: "SEO Content & Strategy for Local Businesses",
@@ -72,7 +106,11 @@ const translations = {
     pack3: "Monthly Pack",
     detail3: "4 blog posts/month",
     whatsapp: "💬 WhatsApp Me Directly",
-    paypal: "Pay with PayPal"
+    paypal: "Pay with PayPal",
+    trusted: "Trusted by Local Shops in Europe & North Africa",
+    privacyTitle: "Privacy Policy",
+    privacyText: "This website does not collect personal data automatically. If you contact us via email or WhatsApp, your name, email or phone may be stored to respond. We respect your privacy in accordance with GDPR. Contact us for access or deletion.",
+    impressumText: "Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 Landau in der Pfalz, Germany<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832"
   },
   fr: {
     subtitle: "Contenu SEO & Stratégie pour Entreprises Locales",
@@ -87,7 +125,11 @@ const translations = {
     pack3: "Pack Mensuel",
     detail3: "4 articles/mois",
     whatsapp: "💬 WhatsApp Direct",
-    paypal: "Payer via PayPal"
+    paypal: "Payer via PayPal",
+    trusted: "De nombreuses boutiques nous font confiance",
+    privacyTitle: "Politique de confidentialité",
+    privacyText: "Ce site ne collecte pas automatiquement de données personnelles. Si vous nous contactez, nous pouvons stocker votre nom/email pour répondre. Nous respectons le RGPD.",
+    impressumText: "Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 Landau in der Pfalz, Allemagne<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832"
   },
   de: {
     subtitle: "SEO Inhalte & Strategie für lokale Unternehmen",
@@ -102,7 +144,11 @@ const translations = {
     pack3: "Monatspaket",
     detail3: "4 Artikel/Monat",
     whatsapp: "💬 WhatsApp Direkt",
-    paypal: "PayPal Zahlung"
+    paypal: "PayPal Zahlung",
+    trusted: "Vertrauenswürdige Kunden in Europa & Nordafrika",
+    privacyTitle: "Datenschutzerklärung",
+    privacyText: "Diese Website sammelt keine personenbezogenen Daten automatisch. Wenn Sie uns kontaktieren, speichern wir ggf. Ihre Daten zur Antwort. DSGVO-konform.",
+    impressumText: "Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 Landau in der Pfalz, Deutschland<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832"
   },
   ar: {
     subtitle: "محتوى SEO واستراتيجيات للشركات المحلية",
@@ -113,28 +159,45 @@ const translations = {
     pack1: "تدقيق مجاني",
     detail1: "فكرة + كلمات مفتاحية",
     pack2: "باقة المبتدئين",
-    detail2: "2 مقال SEO",
+    detail2: "مقالان SEO + كلمات مفتاحية",
     pack3: "باقة شهرية",
     detail3: "4 مقالات شهريًا",
     whatsapp: "💬 واتساب مباشرة",
-    paypal: "الدفع PayPal"
+    paypal: "الدفع عبر PayPal",
+    trusted: "موثوق من متاجر محلية بأوروبا وشمال أفريقيا",
+    privacyTitle: "سياسة الخصوصية",
+    privacyText: "لا يتم جمع بيانات شخصية تلقائيًا. عند تواصلك معنا، قد نخزن اسمك/بريدك للرد. نحترم خصوصيتك وفقًا للائحة GDPR.",
+    impressumText: "Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 لاندوا، ألمانيا<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832"
   }
 };
 
 function switchLang(lang) {
   for (const key in translations[lang]) {
-    document.getElementById(key).innerHTML = translations[lang][key];
+    if (document.getElementById(key)) {
+      document.getElementById(key).innerHTML = translations[lang][key];
+    }
   }
 }
 
 new Chart(document.getElementById('seoChart'), {
   type: 'line',
-  data: { labels: ['1','2','3','4','5','6'], datasets: [{ label: 'Visitors', data: [120,250,450,650,900,1200], borderColor:'#50fa7b', backgroundColor:'rgba(80,250,123,0.2)' }]},
-  options: {responsive:true, scales:{y:{ticks:{color:'#fff'}},x:{ticks:{color:'#fff'}}}}
+  data: {
+    labels: ['1','2','3','4','5','6'],
+    datasets: [{
+      label: 'Visitors',
+      data: [120,250,450,650,900,1200],
+      borderColor:'#50fa7b',
+      backgroundColor:'rgba(80,250,123,0.2)'
+    }]
+  },
+  options: {
+    responsive:true,
+    scales:{
+      y:{ticks:{color:'#fff'}},
+      x:{ticks:{color:'#fff'}}
+    }
+  }
 });
-</script>
-
-</body>
+</script></body>
 </html>
-
 
