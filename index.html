@@ -293,6 +293,7 @@
   <p id="impressumText">
     Wahid Mohamed<br>
     SEOHelperWahid<br>
+    Königstraße 39/41<br>
     76829 Landau in der Pfalz, Germany<br>
     📧 Mohawahid1997@gmail.com<br>
     📱 +49 1573 5645832
@@ -331,7 +332,7 @@ const translations = {
     trusted: "Trusted by Local Shops in Europe & North Africa",
     impressumTitle: "Impressum",
     privacyTitle: "Privacy Policy",
-    impressumText: `Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 Landau in der Pfalz, Germany<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832`,
+    impressumText: `Wahid Mohamed<br>SEOHelperWahid<br>Königstraße 39/41<br>76829 Landau in der Pfalz, Germany<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832`,
     privacyText: `This website does not collect personal data automatically. If you contact us via email or WhatsApp, your name, email or phone may be stored to respond. We respect your privacy in accordance with GDPR. Contact us for access or deletion.`,
     blog1Title: "What is SEO and Why Your Local Business Needs It",
     blog1Summary: "Understand how search engines rank your website and what simple actions you can take today to improve it.",
@@ -340,14 +341,34 @@ const translations = {
     blog3Title: "5 SEO Mistakes Small Businesses Should Avoid",
     blog3Summary: "Common errors that hurt your online visibility and how you can fix them fast and affordably.",
     learnseo: "Learn About SEO – Blog Posts"
-  },
-  fr: {
-    subtitle: "Contenu SEO & Stratégie pour Entreprises Locales",
-    pricing: "Services & Tarifs",
-    pack: "Pack",
-    details: "Détails",
-    price: "Prix",
-    pack1: "Audit Gratuit",
-    detail1: "1 idée + mots-clés",
-    pack2: "Kit Débutant",
-    detail2:
+  }
+  // Add other language translations and address for FR/DE/AR as needed
+};
+
+function switchLang(lang) {
+  for (const key in translations[lang]) {
+    if (document.getElementById(key)) {
+      document.getElementById(key).innerHTML = translations[lang][key];
+    }
+  }
+}
+
+// Blog expand/collapse functionality
+function toggleBlog(idx) {
+  const blogCards = document.querySelectorAll('.blog-preview');
+  blogCards.forEach((card, i) => {
+    if (i === idx) {
+      card.classList.toggle('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+}
+
+new Chart(document.getElementById('seoChart'), {
+  type: 'line',
+  data: {
+    labels: ['1','2','3','4','5','6'],
+    datasets: [{
+      label: 'Visitors',
+      data: [120
