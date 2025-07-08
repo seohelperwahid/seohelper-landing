@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,18 +14,72 @@
       padding: 0;
       line-height: 1.6;
     }
-    nav { background: #1e1e1e; padding: 15px; text-align: center; }
-    nav a { color: #8be9fd; cursor: pointer; margin: 0 8px; font-weight: bold; text-decoration: none; }
-    section { padding: 30px 20px; max-width: 800px; margin: auto; }
-    h1, h2 { color: #50fa7b; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    th, td { border-bottom: 1px solid #333; padding: 10px; }
-    th { color: #ff79c6; }
-    .cta { text-align: center; background: #282a36; padding: 15px; border-radius: 5px; margin-top: 20px; }
-    .cta a { color: #50fa7b; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 5px; }
-    footer { background: #1e1e1e; text-align: center; padding: 10px; color: #888; margin-top: 20px; }
-    .logo-section { text-align: center; margin-top: 40px; }
-    .logo-section img { max-height: 50px; margin: 0 10px; filter: grayscale(100%) brightness(1.2); }
+    nav {
+      background: #1e1e1e;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: #8be9fd;
+      cursor: pointer;
+      margin: 0 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #50fa7b;
+    }
+    section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #50fa7b;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border-bottom: 1px solid #333;
+      padding: 10px;
+    }
+    th {
+      color: #ff79c6;
+    }
+    .cta {
+      text-align: center;
+      background: #282a36;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .cta a {
+      color: #50fa7b;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    footer {
+      background: #1e1e1e;
+      text-align: center;
+      padding: 10px;
+      color: #888;
+      margin-top: 20px;
+    }
+    .logo-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .logo-section img {
+      max-height: 50px;
+      margin: 0 10px;
+      filter: grayscale(100%) brightness(1.2);
+    }
     #cookie-banner {
       position: fixed;
       bottom: 0;
@@ -37,6 +90,7 @@
       padding: 10px;
       text-align: center;
       font-size: 14px;
+      z-index: 9999;
     }
     #cookie-banner button {
       margin-left: 10px;
@@ -53,11 +107,52 @@
       margin-top: 40px;
       border-radius: 5px;
     }
-    .blog-post {
-      margin-bottom: 20px;
+    .blog-preview {
+      margin-bottom: 22px;
+      background: #23232b;
+      padding: 18px 18px 8px;
+      border-left: 4px solid #50fa7b;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    .blog-post h3 {
+    .blog-preview:hover {
+      background: #262a35;
+    }
+    .blog-title {
+      font-size: 22px;
       color: #ffb86c;
+      margin-bottom: 8px;
+      margin-top: 0;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .blog-title span {
+      margin-right: 8px;
+      font-size: 24px;
+    }
+    .blog-summary {
+      color: #cfcfcf;
+      margin-bottom: 0;
+    }
+    .blog-full {
+      display: none;
+      padding: 0 4px 12px 4px;
+      margin-top: 10px;
+      color: #e2e2e2;
+      font-size: 16px;
+      border-left: 3px solid #8be9fd;
+    }
+    .active .blog-full {
+      display: block;
+    }
+    .active .blog-summary {
+      display: none;
+    }
+    @media (max-width: 700px) {
+      section { padding: 18px 4px; }
+      .blog-section { padding: 16px 4px; }
     }
   </style>
 </head>
@@ -75,7 +170,7 @@
 <section>
   <h1 id="title">SEOHelperWahid</h1>
   <p id="subtitle">SEO Content & Strategy for Local Businesses</p>
-  <canvas id="seoChart"></canvas>
+  <canvas id="seoChart" style="background:#232323; border-radius:8px; margin-bottom:30px;"></canvas>
 
   <h2 id="pricing">Packages & Pricing</h2>
   <table>
@@ -87,7 +182,7 @@
 
   <div class="cta">
     <a href="https://wa.me/4915735645832" id="whatsapp">💬 WhatsApp Me Directly</a><br>
-    📧 Mohawahid1997@gmail.com<br>
+    📧 <span id="mail1">Mohawahid1997@gmail.com</span><br>
     💳 <a href="https://www.paypal.me/wahidmohamed24" id="paypal">Pay with PayPal</a>
   </div>
 </section>
@@ -99,28 +194,105 @@
   <img src="https://via.placeholder.com/100x50?text=Client+3" alt="Client 3"/>
 </section>
 
-<section class="blog-section">
-  <h2>Learn About SEO – Blog Posts</h2>
-  <div class="blog-post">
-    <h3>How SEO Transforms Local Businesses</h3>
-    <p>Discover real-life examples of how SEO helped cafés, markets, and service providers triple their organic traffic.</p>
+<section class="blog-section" id="blogSection">
+  <h2 id="learnseo">Learn About SEO – Blog Posts</h2>
+  <!-- Blog Post 1 -->
+  <div class="blog-preview" onclick="toggleBlog(0)">
+    <div class="blog-title"><span>🔍</span><span id="blog1Title">What is SEO and Why Your Local Business Needs It</span></div>
+    <div class="blog-summary" id="blog1Summary">
+      Understand how search engines rank your website and what simple actions you can take today to improve it.
+    </div>
+    <div class="blog-full" id="blog1Full">
+      <b>Introduction:</b><br>
+      SEO, or Search Engine Optimization, is the practice of making your business more visible on Google and other search engines. When someone types “best café in Berlin” or “organic store near me,” SEO is what determines which websites show up on top.<br><br>
+      <b>Why Local SEO Matters:</b><br>
+      Most people never look past the first page of Google results. If your business doesn’t appear there, you’re missing out on customers who are already looking for your products or services. Local SEO helps your shop, café, or service get discovered by people nearby—right when they need you.<br><br>
+      <b>How SEO Works:</b><br>
+      Google uses hundreds of factors to rank sites: keywords, quality content, location, reviews, site speed, and more. By optimizing your website and Google Business Profile, you increase your chances of showing up for relevant searches.<br><br>
+      <b>Simple Actions for Local Businesses:</b>
+      <ul>
+        <li>Claim your Google Business listing and keep info up-to-date.</li>
+        <li>Add photos and posts to your profile regularly.</li>
+        <li>Use keywords that reflect your products, services, and location (e.g. “Vegan Restaurant Neukölln Berlin”).</li>
+        <li>Collect and respond to customer reviews.</li>
+        <li>Ensure your website loads fast and works well on mobile.</li>
+      </ul>
+      <b>Real Example:</b><br>
+      A neighborhood vegan bakery in Berlin doubled its walk-in traffic after optimizing its Google Business profile, adding blog posts about seasonal products, and getting more reviews.<br><br>
+      <b>Conclusion:</b><br>
+      SEO is the best way to turn people searching on their phones into real customers at your door. With just a few targeted actions, any small business can see measurable results in just a few weeks.
+    </div>
   </div>
-  <div class="blog-post">
-    <h3>Top 5 SEO Tips for Small Business Owners</h3>
-    <p>Learn practical, effective strategies any shop can apply to boost online visibility and attract local customers.</p>
+  <!-- Blog Post 2 -->
+  <div class="blog-preview" onclick="toggleBlog(1)">
+    <div class="blog-title"><span>📈</span><span id="blog2Title">How Blogging Increases Website Traffic</span></div>
+    <div class="blog-summary" id="blog2Summary">
+      See how regular SEO blogging attracts new visitors, builds authority and increases leads for your business.
+    </div>
+    <div class="blog-full" id="blog2Full">
+      <b>Introduction:</b><br>
+      Blogging isn’t just for influencers—it's a proven way for local shops, restaurants, and service providers to show up on Google and win more customers.<br><br>
+      <b>How Blogs Drive Traffic:</b><br>
+      Every new blog post is a new page Google can show in search results. If you post a blog about “Top 5 Vegan Brunch Spots in Berlin,” anyone searching for those terms can find you—even if they’ve never heard of your business.<br><br>
+      <b>Benefits of Blogging:</b>
+      <ul>
+        <li>Rank for more keywords and search queries.</li>
+        <li>Educate potential customers about your products/services.</li>
+        <li>Share your expertise and build trust.</li>
+        <li>Keep your website “fresh”—Google loves new content.</li>
+        <li>Answer common questions to save time for your staff and clients.</li>
+      </ul>
+      <b>Real Example:</b><br>
+      An organic grocery in Paris started publishing monthly blogs about healthy recipes and sustainable living tips. Within 6 months, website visitors increased by 160%, and regulars began sharing blog posts on social media—bringing even more new customers.<br><br>
+      <b>Tips for Effective Blogging:</b>
+      <ul>
+        <li>Write about topics your customers search for (recipes, tips, local guides).</li>
+        <li>Include your city or neighborhood in blog titles.</li>
+        <li>End each blog with a simple invitation (“Visit us this weekend!”).</li>
+        <li>Share new blogs on social media and your Google Business page.</li>
+      </ul>
+      <b>Conclusion:</b><br>
+      Regular blogging is a low-cost, high-impact way to attract the right people to your site and turn them into customers. One good post can keep bringing visitors for years.
+    </div>
   </div>
-  <div class="blog-post">
-    <h3>Why Keywords Matter in Your Blog Posts</h3>
-    <p>Understand the role of keyword strategy and how choosing the right search terms brings your site to the top of Google results.</p>
+  <!-- Blog Post 3 -->
+  <div class="blog-preview" onclick="toggleBlog(2)">
+    <div class="blog-title"><span>💡</span><span id="blog3Title">5 SEO Mistakes Small Businesses Should Avoid</span></div>
+    <div class="blog-summary" id="blog3Summary">
+      Common errors that hurt your online visibility and how you can fix them fast and affordably.
+    </div>
+    <div class="blog-full" id="blog3Full">
+      <b>Introduction:</b><br>
+      Even great businesses sometimes make simple SEO mistakes that block new customers from ever finding them. Here’s what to watch out for and how to fix it fast.<br><br>
+      <b>1. Missing Google Business Profile:</b><br>
+      Not claiming or updating your free profile means you don’t show up in local searches and maps.<br><br>
+      <b>2. No Keywords on Website:</b><br>
+      Using only brand names or general words won’t work. Use keywords like “Vegan Café Prenzlauer Berg” or “Bio Supermarkt Kreuzberg” in your headings and content.<br><br>
+      <b>3. Slow or Non-Mobile Website:</b><br>
+      People leave slow, clunky sites. Google now prefers mobile-first, fast-loading sites.<br><br>
+      <b>4. No Reviews or Outdated Info:</b><br>
+      New customers trust reviews. Having none or not replying to bad reviews is a red flag.<br><br>
+      <b>5. No Fresh Content:</b><br>
+      A website that never updates drops in Google’s rankings. Add a new blog or update info every month.<br><br>
+      <b>Fixes:</b>
+      <ul>
+        <li>Claim and update your Google Business listing regularly.</li>
+        <li>List your services and location in page titles.</li>
+        <li>Optimize for speed and mobile with image compression.</li>
+        <li>Ask for reviews and reply to each one.</li>
+        <li>Add fresh blog content and keep info current.</li>
+      </ul>
+      <b>Conclusion:</b><br>
+      Avoiding these common mistakes can quickly move your shop up in Google search results. Even small improvements can bring more foot traffic and sales.
+    </div>
   </div>
 </section>
 
 <section id="impressum">
-  <h2>Impressum</h2>
+  <h2 id="impressumTitle">Impressum</h2>
   <p id="impressumText">
     Wahid Mohamed<br>
     SEOHelperWahid<br>
-    Ostring Center 17–19<br>
     76829 Landau in der Pfalz, Germany<br>
     📧 Mohawahid1997@gmail.com<br>
     📱 +49 1573 5645832
@@ -141,39 +313,41 @@
 </div>
 
 <script>
-// Translation function remains unchanged
-const translations = {...};
-
-function switchLang(lang) {
-  for (const key in translations[lang]) {
-    if (document.getElementById(key)) {
-      document.getElementById(key).innerHTML = translations[lang][key];
-    }
-  }
-}
-
-new Chart(document.getElementById('seoChart'), {
-  type: 'line',
-  data: {
-    labels: ['1','2','3','4','5','6'],
-    datasets: [{
-      label: 'Visitors',
-      data: [120,250,450,650,900,1200],
-      borderColor:'#50fa7b',
-      backgroundColor:'rgba(80,250,123,0.2)'
-    }]
+const translations = {
+  en: {
+    subtitle: "SEO Content & Strategy for Local Businesses",
+    pricing: "Packages & Pricing",
+    pack: "Package",
+    details: "Details",
+    price: "Price",
+    pack1: "Free Audit",
+    detail1: "1 blog idea + keywords",
+    pack2: "Starter Kit",
+    detail2: "2 blog posts + keywords",
+    pack3: "Monthly Pack",
+    detail3: "4 blog posts/month",
+    whatsapp: "💬 WhatsApp Me Directly",
+    paypal: "Pay with PayPal",
+    trusted: "Trusted by Local Shops in Europe & North Africa",
+    impressumTitle: "Impressum",
+    privacyTitle: "Privacy Policy",
+    impressumText: `Wahid Mohamed<br>SEOHelperWahid<br>Ostring Center 17–19<br>76829 Landau in der Pfalz, Germany<br>📧 Mohawahid1997@gmail.com<br>📱 +49 1573 5645832`,
+    privacyText: `This website does not collect personal data automatically. If you contact us via email or WhatsApp, your name, email or phone may be stored to respond. We respect your privacy in accordance with GDPR. Contact us for access or deletion.`,
+    blog1Title: "What is SEO and Why Your Local Business Needs It",
+    blog1Summary: "Understand how search engines rank your website and what simple actions you can take today to improve it.",
+    blog2Title: "How Blogging Increases Website Traffic",
+    blog2Summary: "See how regular SEO blogging attracts new visitors, builds authority and increases leads for your business.",
+    blog3Title: "5 SEO Mistakes Small Businesses Should Avoid",
+    blog3Summary: "Common errors that hurt your online visibility and how you can fix them fast and affordably.",
+    learnseo: "Learn About SEO – Blog Posts"
   },
-  options: {
-    responsive:true,
-    scales:{
-      y:{ticks:{color:'#fff'}},
-      x:{ticks:{color:'#fff'}}
-    }
-  }
-});
-</script>
-
-</body>
-</html>
-
-  
+  fr: {
+    subtitle: "Contenu SEO & Stratégie pour Entreprises Locales",
+    pricing: "Services & Tarifs",
+    pack: "Pack",
+    details: "Détails",
+    price: "Prix",
+    pack1: "Audit Gratuit",
+    detail1: "1 idée + mots-clés",
+    pack2: "Kit Débutant",
+    detail2:
